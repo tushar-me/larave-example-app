@@ -10,36 +10,18 @@ use Illuminate\Support\Str;
 
 class CategoryController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
+    
     public function index()
     {
-        return "all categories";
+       //
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
     public function store(CategoryRequest $request)
     {
         
-        $data = $request->validated();
-
-        $data['slug'] = Str::slug($data['name']);
-        $data['icon'] = $data['name'];
-
-        return $data;
-        
-        Category::create($data);
-        return response()->json([
-            'message' => 'category created succesfully'
-        ]);
+        //
     }
 
-    /**
-     * Display the specified resource.
-     */
     public function show(string $id)
     {
         //
@@ -53,9 +35,6 @@ class CategoryController extends Controller
         //
     }
 
-    /**
-     * Remove the specified resource from storage.
-     */
     public function destroy(string $id)
     {
         //

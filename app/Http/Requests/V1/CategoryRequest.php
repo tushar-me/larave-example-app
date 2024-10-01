@@ -27,7 +27,6 @@ class CategoryRequest extends FormRequest
             'icon' => 'nullable|string',
             'banner' => 'nullable|string',
             'description' => 'nullable|string',
-            'details' => 'nullable|string',
         ];
     }
 }

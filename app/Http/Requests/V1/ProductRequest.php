@@ -6,9 +6,7 @@ use Illuminate\Foundation\Http\FormRequest;
 
 class ProductRequest extends FormRequest
 {
-    /**
-     * Determine if the user is authorized to make this request.
-     */
+  
     public function authorize(): bool
     {
         return true;
@@ -28,8 +26,6 @@ class ProductRequest extends FormRequest
             'price' => 'required|numeric|min:0',
             'cover_image' => 'nullable|file|image|mimes:jpg,jpeg,png',
             'description' => 'required|string',
-
-
         ];
     }
 }

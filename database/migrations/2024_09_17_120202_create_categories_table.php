@@ -17,8 +17,7 @@ return new class extends Migration
             $table->string('slug');
             $table->string('icon')->nullable();
             $table->string('banner')->nullable();
-            $table->Text('description')->nullable();
-            $table->LongText('details')->nullable();
+            $table->longText('description')->nullable();
             $table->timestamps();
         });
     }
