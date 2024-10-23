@@ -11,7 +11,7 @@ class ProductController extends Controller
    
     public function index()
     {
-        $products = Product::select('id', 'category_id', 'title')->with('category')->get();
+        $products = Product::query()->with('category')->get();
 
         return response()->json($products);
     }
@@ -19,7 +19,7 @@ class ProductController extends Controller
    
     public function store(Request $request)
     {
-        //
+        return 'product Added Successfully';
     }
 
  
@@ -39,6 +39,6 @@ class ProductController extends Controller
     
     public function destroy(string $id)
     {
-        //
+        $product = Product::where('id', $id)->delete();
     }
 }
